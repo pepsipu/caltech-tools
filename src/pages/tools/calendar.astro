@@ -1,0 +1,39 @@
+---
+import Card from '../../components/Card.astro';
+import ContentPage from '../../layouts/ContentPage.astro';
+---
+
+<ContentPage>
+	<Card>
+		<p style="margin-top: 0;">First, navigate to the Course Enrollment page. It should look something like this.</p>
+		<img style="display: block; margin-left: auto; margin-right: auto;" src="/regis.png"/>
+		<p>Save the webpage as a file with the shortcuts <kbd>⌘</kbd>+<kbd>S</kbd> on Mac, or<kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows/Linux.
+			This file, usually labeled <code>CourseEnrollment.html</code>, can be uploaded here.</p>
+		
+		
+	</Card>
+</ContentPage>
+
+<script>
+	import { EnrollmentParser } from "../../lib/enrollmentParser";
+	const course = await fetch("/CourseEnrollment.html");
+	const parser = new EnrollmentParser(await course.text());
+	console.log(parser.getCourses())
+</script>
+
+<style>
+kbd {
+	border-radius: 5px;
+    padding: 0.1em 0.5em;
+    background-color: #13151a;
+}
+
+ code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+</style>

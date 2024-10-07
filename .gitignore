@@ -26,3 +26,7 @@ pnpm-debug.log*
 # wrangler files
 .wrangler
 .dev.vars
+
+# pls dont steal my creds (which might be in the html for some reason??)
+corpus
+public/CourseEnrollment.html
