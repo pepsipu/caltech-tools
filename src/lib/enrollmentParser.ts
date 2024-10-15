@@ -53,8 +53,8 @@ class Course {
     offering: [string, string],
     public offeringCode: string,
     public sectionInstructor: string,
-    timestamps: string[],
-    locations: string[]
+    _timestamps: string[],
+    _locations: string[]
   ) {
     [this.title, this.description] = offering;
   }
