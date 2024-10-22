@@ -16,6 +16,9 @@
     "@astrojs/cloudflare": "^11.1.0",
     "@astrojs/svelte": "^5.7.1",
     "astro": "^4.15.11",
+    "date-fns": "^4.1.0",
+    "ics": "^3.8.1",
+    "js-file-download": "^0.4.12",
     "svelte": "^4.2.19",
     "svelte-file-dropzone": "^2.0.8",
     "typescript": "^5.6.2"

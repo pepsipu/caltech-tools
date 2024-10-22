@@ -1,3 +1,5 @@
+import { Course } from "./course";
+
 export class EnrollmentParser {
   document: Document;
 
@@ -42,21 +44,6 @@ export class EnrollmentParser {
     const table = this.getTable();
     const courseList = this.parseRows(table);
     return courseList;
-  }
-}
-
-class Course {
-  title: string;
-  description: string;
-
-  constructor(
-    offering: [string, string],
-    public offeringCode: string,
-    public sectionInstructor: string,
-    _timestamps: string[],
-    _locations: string[]
-  ) {
-    [this.title, this.description] = offering;
   }
 }
 
